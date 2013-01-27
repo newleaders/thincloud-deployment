@@ -1,0 +1,7 @@
+require "capistrano/version"
+require "thincloud/capistrano"
+
+Dir["lib/recipes/*.rb"].each { |recipe| load(recipe) } # local overrides
+
+load "config/deploy"
+
