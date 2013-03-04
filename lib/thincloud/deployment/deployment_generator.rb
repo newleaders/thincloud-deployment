@@ -1,6 +1,8 @@
 require "thor"
 
 module Thincloud
+
+  # Public: Inherit Thor actions
   class ThorBase < ::Thor::Group
     include ::Thor::Actions
   end
@@ -12,6 +14,8 @@ module Thincloud
     ThorBase
   end
 
+
+  # Public: Make thincloud:deployment generator available to Rails
   class DeploymentGenerator < GeneratorBase
     source_root File.expand_path("../templates", __FILE__)
 
