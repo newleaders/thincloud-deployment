@@ -68,11 +68,6 @@ Any of the tasks or settings can be overriden in these files.
 
 Just add a new `Ruby` file under `config/deploy`. To add a `demo` stage you would create `config/deploy/demo.rb`.
 
-### JRuby
-
-The `grit` gem will need to be built separately for the flowdock capistrano recipe to work.
-It is only included as a dependency of `thincloud-deployment` on the MRI and Rubinius platforms.
-
 ## Contributing
 
 1. [Fork it](https://github.com/newleaders/thincloud-deployment/fork_select)
