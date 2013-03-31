@@ -23,9 +23,8 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "capistrano",                   "~> 2.14.1"
   gem.add_dependency "capistrano-fast_remote_cache", "~> 1.0.0"
-  gem.add_dependency "flowdock",                     "~> 0.3.0"
-  gem.add_dependency "grit",                         "~> 2.5.0"
   gem.add_dependency "rvm-capistrano",               "~> 1.2.7"
+  gem.add_dependency "flowdock",                     "~> 0.3.0"
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "thincloud-test"
