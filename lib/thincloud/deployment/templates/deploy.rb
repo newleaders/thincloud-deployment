@@ -8,4 +8,4 @@
 set :domain, "DOMAIN_NAME.com"
 set :application, "APPLICATION_NAME"
 set :repository, "git@github.com:ORGANIZATION/APPLICATION_NAME.git"
-set :flowdock_api_token, "FLOWDOCK_API_TOKEN"
+set :flowdock_api_token, ["FLOWDOCK_API_TOKEN"]
