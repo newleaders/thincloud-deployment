@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Thincloud Deployment by newleaders</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Thincloud Deployment</h1>
+          <h2>Opinionated framework dependencies, configuration, and recipes for Capistrano-based deployments</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/newleaders/thincloud-deployment/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/newleaders/thincloud-deployment/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/newleaders/thincloud-deployment" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>Thincloud::Deployment</h1>
+
+<p>Opinionated framework dependencies, configuration, and recipes for Capistrano-based deployments.</p>
+
+<p><a href="https://newleaders.com">New Leaders</a> uses this gem to manage the following dependencies:</p>
+
+<ul>
+<li><a href="https://github.com/capistrano/capistrano">capistrano</a></li>
+<li><a href="https://github.com/newleaders/capistrano-fast_remote_cache">capistrano-fast_remote_cache</a></li>
+<li><a href="https://github.com/flowdock/flowdock-api">flowdock</a></li>
+<li><a href="https://github.com/mojombo/grit">grit</a></li>
+<li><a href="https://github.com/wayneeseguin/rvm-capistrano">rvm-capistrano</a></li>
+</ul><h2>Requirements</h2>
+
+<p>This gem has been test against the following Ruby versions:</p>
+
+<ul>
+<li>1.9.3</li>
+</ul><h2>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'thincloud-deployment'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install thincloud-deployment
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>This gem manages the deployment framework dependencies for you, provides a default set of <code>capistrano</code> recipes, and provides a <code>Thor</code> generator to bootstrap application deployment.</p>
+
+<p>This is typically used in <code>Rails</code> applications so a rails-like folder structure is assumed when running the generator.</p>
+
+<p>To enable the default New Leaders conventions, run the following command:</p>
+
+<pre><code>$ thincloud-capify
+</code></pre>
+
+<p>If you are running this from the provided Rails generator, run:</p>
+
+<pre><code>$ rails g thincloud:deployment
+</code></pre>
+
+<p>This generator will do the following:</p>
+
+<ul>
+<li>Add <code>Capfile</code> at the root of your project</li>
+<li>Add <code>config/deploy.rb</code> for application-level deployment settings</li>
+<li>Add <code>config/deploy/staging.rb</code> and <code>config/deploy/production.rb</code> for stage-level deployment settings.</li>
+<li>Add the <code>lib/recipes</code> directory to store project specific recipes.</li>
+<li>Set up <code>foreman</code>
+</li>
+</ul><h3>Configuration</h3>
+
+<p>All conventional settings are contained in the gem recipes and are loaded into the <code>Capistrano</code> configuration during startup.</p>
+
+<p><code>thincloud-deployment</code> follows the <code>Capistrano</code> multistage deployment strategy. As you can see in the generator description above, we create an application <code>deploy.rb</code> as well as individual stage files (<code>staging.rb</code>, <code>production.rb</code>).</p>
+
+<p>Any of the tasks or settings can be overriden in these files.</p>
+
+<h4>Adding stages</h4>
+
+<p>Just add a new <code>Ruby</code> file under <code>config/deploy</code>. To add a <code>demo</code> stage you would create <code>config/deploy/demo.rb</code>.</p>
+
+<h2>Contributing</h2>
+
+<ol>
+<li><a href="https://github.com/newleaders/thincloud-deployment/fork_select">Fork it</a></li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li><a href="https://github.com/newleaders/thincloud-deployment/pull/new">Create a Pull Request</a></li>
+</ol><h2>License</h2>
+
+<ul>
+<li>Freely distributable and licensed under the <a href="http://newleaders.mit-license.org/2013/license.html">MIT license</a>.</li>
+<li>Copyright (c) 2013 New Leaders (<a href="opensource@newleaders.com">opensource@newleaders.com</a>)</li>
+<li><a href="https://newleaders.com">https://newleaders.com</a></li>
+</ul>
+        </section>
+
+        <footer>
+          Thincloud Deployment is maintained by <a href="https://github.com/newleaders">newleaders</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
