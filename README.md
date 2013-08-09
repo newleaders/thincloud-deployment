@@ -8,7 +8,6 @@ Opinionated framework dependencies, configuration, and recipes for Capistrano-ba
 * [capistrano-fast_remote_cache](https://github.com/newleaders/capistrano-fast_remote_cache)
 * [flowdock](https://github.com/flowdock/flowdock-api)
 * [grit](https://github.com/mojombo/grit)
-* [rvm-capistrano](https://github.com/wayneeseguin/rvm-capistrano)
 
 ## Requirements
 

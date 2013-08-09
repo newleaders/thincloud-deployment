@@ -5,4 +5,3 @@ set :bundle_without do
     gem_groups += [:staging] if stage == :production
   end
 end
-
