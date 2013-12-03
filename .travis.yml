@@ -8,6 +8,7 @@ rvm:
   - ruby-head
 matrix:
   allow_failures:
+    - rvm: jruby-19mode
     - rvm: ruby-head
 before_script: "./test/ci/before_script.sh"
 script: "./test/ci/ci_runner.sh"
