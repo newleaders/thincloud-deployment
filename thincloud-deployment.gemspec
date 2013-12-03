@@ -1,7 +1,6 @@
 # -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'thincloud/deployment/version'
+
+require File.expand_path("../lib/thincloud/deployment/version", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = "thincloud-deployment"
@@ -27,6 +26,9 @@ Gem::Specification.new do |gem|
   gem.add_dependency "grit",                         "~> 2.5.0"
   gem.add_dependency "rvm-capistrano",               "~> 1.2.7"
 
-  gem.add_development_dependency "rake"
+  gem.add_development_dependency "bundler", "~> 1.2"
+  gem.add_development_dependency "rake", "~> 10.0"
+  gem.add_development_dependency "rubygems-tasks", "~> 0.2"
+  gem.add_development_dependency "yard", "~> 0.8"
   gem.add_development_dependency "thincloud-test"
 end

@@ -1,11 +1,17 @@
 language: ruby
+before_install: gem install bundler
 rvm:
-  - 1.9.2
   - 1.9.3
+  - 2.0.0
+  - ruby-head
   - jruby-19mode
-  - rbx-19mode
-env:
-  - CI=true RAILS_ENV=test JRUBY_OPTS="--1.9 -Xcext.enabled=true" RBXOPT=-X19
+  - rbx-2.1.1
+  - rbx-2.2.0
+  - rbx-2.2.1
+matrix:
+  allow_failures:
+    - rvm: jruby-19mode
+    - rvm: ruby-head
 before_script: "./test/ci/before_script.sh"
 script: "./test/ci/ci_runner.sh"
 notifications:
